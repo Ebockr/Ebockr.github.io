@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Richard Ebock</title>
+  <meta name="description" content="Richard Ebock — CS student at ETH Zurich working toward principled theoretical foundations for robot learning: acting under uncertainty and learning from human interaction.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ccircle%20cx='8'%20cy='8'%20r='8'%20fill='%231f5fae'/%3E%3Ctext%20x='8'%20y='11.6'%20text-anchor='middle'%20font-family='Georgia,serif'%20font-size='10'%20fill='%23fff'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+
+    <header>
+      <div class="header-text">
+        <h1>Richard Ebock</h1>
+        <p class="tagline">CS student at ETH Zurich. I’m interested in principled theoretical foundations for robot learning — acting under uncertainty, and learning from human interaction.</p>
+      </div>
+      <img class="photo" src="assets/photo.jpg" alt="Photo of Richard Ebock" width="160" height="160">
+    </header>
+
+    <section id="about">
+      <p>I’m a computer science student at <a href="https://ethz.ch/">ETH Zurich</a>, currently on a research exchange at the <a href="https://www.washington.edu/">University of Washington</a>, and starting the MSc in Advanced Computer Science at the <a href="https://www.ox.ac.uk/">University of Oxford</a> in October 2026.</p>
+      <p>I’m interested in how agents can learn from the sparse, imperfect feedback humans actually give — interventions, corrections, observation — rather than dense supervision. My bachelor’s thesis at the <a href="https://las.inf.ethz.ch/">Learning &amp; Adaptive Systems Group</a> (with <a href="https://las.inf.ethz.ch/krausea">Andreas Krause</a>, Thomas Kleine Buening, and Bruce D. Lee) asked whether stop-signal interventions alone are enough to recover near-optimal behavior, and what they reveal about the latent reward. At UW, I’m exploring the other side of the same question: making these ideas work on real robots.</p>
+      <p>Always happy to hear from people thinking about similar problems.</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p>I’m interested in building principled theoretical foundations for robot learning. Two facts shape that interest: the world a robot acts in is uncertain, and the richest supervision it gets comes from interaction with humans — sparse, imperfect signals like interventions, corrections, and observation. I study how to take both seriously: inverse reinforcement learning from human feedback and what it reveals about the latent reward, uncertainty-aware exploration where the agent actively seeks out what it doesn’t yet know, and making these ideas work on real robots through model-based RL, world models, and learning from observation.</p>
+
+      <div class="entry">
+        <p class="entry-title">Learning from Human Interventions: Intervention Inverse Reinforcement Learning</p>
+        <p class="entry-meta">Bachelor thesis, Learning &amp; Adaptive Systems Group, ETH Zurich, 2026. Supervised by Andreas Krause, Thomas Kleine Buening, and Bruce D. Lee.</p>
+        <p>Can an agent recover near-optimal behavior from nothing but stop-signal interventions — a supervisor occasionally halting it? I formalized several intervention rules in finite-horizon MDPs, analyzed what each reveals about the latent reward, and proved reductions between them. Building on this, I developed an inverse-RL algorithm that updates a feasible set of rewards from intervention feedback, with termination and sub-optimality guarantees, and validated it in gridworld experiments.</p>
+      </div>
+
+      <div class="entry">
+        <p class="entry-meta">Ongoing</p>
+        <p>At the University of Washington I’m currently working on model-based methods for learning real-world robot manipulation from observation. Paper under review.</p>
+      </div>
+      <!-- Future publication entries go here, using the same .entry structure
+           (.entry-title, .entry-meta, description, and links if any). -->
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="date">Oct 2026</span> Starting the MSc in Advanced Computer Science at the University of Oxford.</li>
+        <li><span class="date">Mar 2026</span> Started a research exchange at the University of Washington (robot learning).</li>
+        <li><span class="date">Mar 2026</span> Submitted my bachelor’s thesis on intervention inverse reinforcement learning at ETH’s Learning &amp; Adaptive Systems Group.</li>
+      </ul>
+    </section>
+
+    <footer id="contact">
+      <p>
+        <a href="mailto:rebock@ethz.ch">
+          <svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1.75 3h12.5c.41 0 .75.34.75.75v8.5c0 .41-.34.75-.75.75H1.75a.75.75 0 0 1-.75-.75v-8.5c0-.41.34-.75.75-.75Zm.75 2.06v6.44h11V5.06L8.43 8.77a.75.75 0 0 1-.86 0L2.5 5.06Zm10.05-.56H3.45L8 7.23l4.55-2.73Z"/></svg>
+          rebock@ethz.ch</a>
+        <a href="https://github.com/Ebockr">
+          <svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          GitHub</a>
+        <a href="https://www.linkedin.com/in/Ebockr">
+          <svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M1.5 1h13c.28 0 .5.22.5.5v13a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-13c0-.28.22-.5.5-.5ZM4.9 6.1H2.8v6.6h2.1V6.1Zm.17-2.1a1.22 1.22 0 1 0-2.44 0 1.22 1.22 0 0 0 2.44 0Zm8.13 4.7c0-1.93-1.24-2.78-2.6-2.78-1.1 0-1.84.6-2.1 1.12V6.1H6.4v6.6h2.1V9.2c0-.93.43-1.49 1.25-1.49.79 0 1.25.55 1.25 1.49v3.5h2.2V8.7Z"/></svg>
+          LinkedIn</a>
+      </p>
+      <p class="updated">Last updated: September 2026</p>
+    </footer>
+
+  </main>
+</body>
+</html>
