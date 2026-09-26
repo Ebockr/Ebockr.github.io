@@ -98,7 +98,11 @@ h1 {
   background: var(--photo-bg);
 }
 
-/* Contact row (below intro) */
+/* Contact row. One component, used below the intro and again in the footer. */
+
+.sprite {
+  display: none;
+}
 
 .contacts {
   display: flex;
@@ -125,6 +129,7 @@ h1 {
   width: 1em;
   height: 1em;
   flex-shrink: 0;
+  fill: currentColor;
 }
 
 /* Sections */
@@ -170,6 +175,59 @@ section > p:last-child {
   margin-bottom: 0;
 }
 
+/* Entry links + collapsed live preview of an external project page */
+
+.entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 0.1rem 0 0;
+  font-size: 0.875rem;
+}
+
+.entry-links a {
+  color: var(--muted);
+}
+
+.entry-links a:hover,
+.entry-links a:focus {
+  color: var(--link);
+  text-decoration: none;
+}
+
+/* Figures in a research entry: a diagram and a rollout video. */
+
+.figure {
+  margin: 1.15rem 0 0;
+}
+
+.figure img,
+.figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+/* The diagram is drawn on white, so it keeps its own background in dark mode
+   rather than being surrounded by one. */
+.figure img {
+  background: #fff;
+}
+
+.figure video {
+  background: #000;
+}
+
+.figure figcaption {
+  margin: 0.45rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
 /* News */
 
 .news {
@@ -202,30 +260,10 @@ footer {
   font-size: 0.9rem;
 }
 
-footer p {
+/* The footer's contact row is the same .contacts component; it only needs its
+   outer spacing reset, since it sits directly under the footer's top rule. */
+footer .contacts {
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-}
-
-footer a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--muted);
-}
-
-footer a:hover,
-footer a:focus {
-  color: var(--link);
-  text-decoration: none;
-}
-
-footer .icon {
-  width: 1em;
-  height: 1em;
-  flex-shrink: 0;
 }
 
 .updated {
@@ -257,4 +295,5 @@ footer .icon {
     grid-template-columns: 4.5rem 1fr;
     column-gap: 0.75rem;
   }
+
 }
